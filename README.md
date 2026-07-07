@@ -186,3 +186,8 @@ cd frontend && npm run build
 ## 📝 License
 
 MIT — built for educational purposes as a paper trading simulator.
+
+
+## Video Demonstration
+
+Link - https://drive.google.com/file/d/1ctN9zpvnBiUmW22ENDlbBX-ASZyC8FhG/view?usp=drive_link
