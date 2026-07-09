@@ -1,37 +1,37 @@
 /* ============================================
    SB STOCKS — Global Styles & Design Tokens
-   Formal Light Blue & White Aesthetic
+   Formal Light Blue & White Aesthetic (Optimized Dashboard)
    ============================================ */
 
 :root {
-  /* Color Palette (White & Slate Grays) */
-  --bg-primary:    #F4F7FC;
-  --bg-secondary:  #EBF1FA;
-  --bg-card:       #FFFFFF;
+  /* Color Palette (Clean White, Ice Blue Sidebar, & Clear Contrast) */
+  --bg-primary:    #F4F7FC;       /* Main Dashboard Background */
+  --bg-secondary:  #E8EFF9;       /* Sidebar & Ticker Tapes */
+  --bg-card:       #FFFFFF;       /* Component Cards */
   --bg-elevated:   #FFFFFF;
-  --border:        #D2DFEE;
+  --border:        #D9E2EC;       /* Clean Card Borders */
   --border-light:  #E2ECF8;
 
-  /* Accent Colors (Professional Light Blue) */
-  --cyan:          #0070E0;
-  --cyan-dim:      rgba(0, 112, 224, 0.08);
-  --cyan-glow:     rgba(0, 112, 224, 0.2);
+  /* Accent Colors (Professional Corporate Blue) */
+  --cyan:          #0066CC;
+  --cyan-dim:      rgba(0, 102, 204, 0.08);
+  --cyan-glow:     rgba(0, 102, 204, 0.15);
 
-  /* Trade Colors (Adjusted for Light Background) */
+  /* Trade Colors (Deepened for rich contrast on white backgrounds) */
   --green:         #00875A;
   --green-dim:     rgba(0, 135, 90, 0.08);
-  --green-glow:    rgba(0, 135, 90, 0.2);
-  --red:           #DE350B;
-  --red-dim:       rgba(222, 53, 11, 0.08);
-  --red-glow:      rgba(222, 53, 11, 0.2);
+  --green-glow:    rgba(0, 135, 90, 0.15);
+  --red:           #D32F2F;
+  --red-dim:       rgba(211, 47, 47, 0.08);
+  --red-glow:      rgba(211, 47, 47, 0.15);
   --amber:         #B65C00;
   --amber-dim:     rgba(182, 92, 0, 0.08);
 
-  /* Text (Dark Slate for high readability) */
-  --text-primary:  #172B4D;
-  --text-secondary:#4A5568;
-  --text-muted:    #718096;
-  --text-dim:      #A0AEC0;
+  /* Text (Optimized Slate Grays for strict readability) */
+  --text-primary:  #0F1E36;       /* Deep Slate for Headers */
+  --text-secondary:#334E68;       /* Clean Dark Gray for Subtext */
+  --text-muted:    #627D98;       /* Labels and structural text */
+  --text-dim:      #9FB3C8;       /* Placeholders */
 
   /* Typography */
   --font-display:  'Space Grotesk', sans-serif;
@@ -115,16 +115,16 @@ input, select, textarea {
 ::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
 
 /* ========== Utility Classes ========== */
-.positive { color: var(--green); }
-.negative { color: var(--red); }
+.positive { color: var(--green) !important; font-weight: 600; }
+.negative { color: var(--red) !important; font-weight: 600; }
 .neutral  { color: var(--text-secondary); }
 .mono     { font-family: var(--font-mono); }
 
 .badge-up {
   background: var(--green-dim);
   color: var(--green);
-  border: 1px solid rgba(0, 135, 90, 0.2);
-  padding: 2px 8px;
+  border: 1px solid rgba(0, 135, 90, 0.25);
+  padding: 4px 10px;
   border-radius: 20px;
   font-size: 11px;
   font-weight: 600;
@@ -133,8 +133,8 @@ input, select, textarea {
 .badge-down {
   background: var(--red-dim);
   color: var(--red);
-  border: 1px solid rgba(222, 53, 11, 0.2);
-  padding: 2px 8px;
+  border: 1px solid rgba(211, 47, 47, 0.25);
+  padding: 4px 10px;
   border-radius: 20px;
   font-size: 11px;
   font-weight: 600;
@@ -148,8 +148,8 @@ input, select, textarea {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 112, 224, 0); }
-  50%       { box-shadow: 0 0 12px 2px rgba(0, 112, 224, 0.1); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 102, 204, 0); }
+  50%       { box-shadow: 0 0 12px 2px rgba(0, 102, 204, 0.1); }
 }
 
 @keyframes ticker-scroll {
@@ -197,7 +197,7 @@ input, select, textarea {
   letter-spacing: 0.3px;
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--cyan) 0%, #0056B3 100%);
+  background: linear-gradient(135deg, var(--cyan) 0%, #004C99 100%);
   color: #fff;
 }
 .btn-primary:hover {
@@ -214,7 +214,7 @@ input, select, textarea {
   box-shadow: 0 4px 12px var(--green-glow);
 }
 .btn-sell {
-  background: linear-gradient(135deg, var(--red), #B32400);
+  background: linear-gradient(135deg, var(--red), #991B1B);
   color: #fff;
   font-weight: 700;
 }
@@ -239,16 +239,16 @@ input, select, textarea {
   box-shadow: none !important;
 }
 
-/* ========== Card ========== */
+/* ========== Card Component Setup ========== */
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  box-shadow: 0 2px 5px rgba(15, 30, 54, 0.04);
 }
 .card-glow {
-  box-shadow: 0 4px 20px rgba(0, 112, 224, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 102, 204, 0.06);
 }
 
 /* ========== Loading Spinner ========== */
@@ -271,7 +271,7 @@ input, select, textarea {
   overflow: hidden;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
-  padding: 8px 0;
+  padding: 10px 0;
   white-space: nowrap;
 }
 .ticker-inner {
@@ -302,14 +302,15 @@ input, select, textarea {
   font-size: 26px;
   font-weight: 700;
   color: var(--text-primary);
-  line-height: 1;
+  line-height: 1.2;
+  margin-top: 6px;
 }
 .stat-label {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 4px;
+  font-weight: 600;
 }
 
 /* ========== Table ========== */
@@ -320,13 +321,13 @@ input, select, textarea {
 }
 .data-table th {
   text-align: left;
-  padding: 10px 12px;
+  padding: 12px;
   color: var(--text-muted);
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
 .data-table td {
   padding: 14px 12px;
@@ -335,7 +336,7 @@ input, select, textarea {
 }
 .data-table tr:last-child td { border-bottom: none; }
 .data-table tr:hover td {
-  background: rgba(0, 112, 224, 0.03);
+  background: rgba(0, 102, 204, 0.02);
   color: var(--text-primary);
 }
 .data-table td.sym-cell {
